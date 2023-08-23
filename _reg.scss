@@ -1,0 +1,85 @@
+.registration {
+    display: flex;
+    justify-content: space-around;
+    text-align: start;
+  }
+  
+  
+  .registration-form__text {
+    @include registration_text;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: start;
+    margin-top: 6px;
+    color: #9F9F9F;
+  }
+  
+  
+  .registration-text {
+    max-width: 35%;
+    &__heading{
+        @include registration_text;
+        line-height: 29px;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 64px 0 0 0;
+    }
+    &__subheading{
+        @include registration_text;
+        line-height: 29px;
+        font-weight: 300;
+        margin: 22px 0 0 0;
+        display: block;
+        max-width: 650px;
+    }
+    &__list{
+        list-style: none;
+        &-item{
+            @include registration_text;
+            line-height: 29px;
+            font-weight: 300;
+            margin: 16px 0 0 43px;
+            position: relative;
+        }
+    }
+  }
+  
+ 
+  
+  
+  .registration__fieldset {
+    margin: 34px 0 0 0;
+    border: none;
+  }
+  
+  
+  .registration__fieldset_radio {
+    display: flex;
+    justify-content: start;
+    border: none;
+  }
+  
+  
+  
+  .registration-form__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .registration-form__submit{
+    @include submit-red-button;
+    margin-bottom: 113px;
+    margin-top: 55px;
+    text-transform: uppercase;
+  
+  }
+  
+  
+  .registration-form__submit:hover{
+    @extend %hower-button
+  
+  }
