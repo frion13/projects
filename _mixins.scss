@@ -16,6 +16,15 @@
     padding-left: $padding;
     padding-right: $padding;
   }
+
+  @mixin head {
+    min-height: 148px;
+    background: #F8F3F4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 96px;
+  }
   
   // Миксин для создания вертикальных отступов
   @mixin vertical-padding($padding) {
@@ -29,7 +38,7 @@
     height: 50px;
     background-color: #F16D7F;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 19px;
     font-weight: 300;
     font-style: normal;
@@ -42,11 +51,38 @@
   }
 
   @mixin registration_text{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     color: #000000;
     text-align: start;
+    @media (min-width: 768px) and (max-width: 1024px) { 
+      font-size: 1rem;
+      }
+    
 
   }
-  
 
+
+  @mixin subscribe{
+    display: flex;
+    text-align: center;
+    background-image: url(img/subscribe.jpg);
+    background-size: cover;
+    justify-content: center;
+    margin-top: 128px;
+    flex-wrap: wrap;
+  }
+  
+@mixin content-product{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  border: 1px solid #EAEAEA;
+  margin-top: -65px;
+  margin-left: 230px;
+  margin-right: 230px;
+  padding-top: 65px;
+  padding-bottom: 78px;
+}

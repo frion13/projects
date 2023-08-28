@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     text-align: start;
+    flex-basis: fit-content;
   }
   
   
@@ -59,6 +60,18 @@
     justify-content: start;
     border: none;
   }
+ .registration__shipping_input_radio{
+  font-size: 11px;
+ }
+  
+
+ .registration__shipping_heading{
+    font-size: 1rem;
+    line-height: 19px;
+    font-weight: 300;
+    font-style: normal;
+    color: #222224;
+    padding: 13px 0 20px 0;}
   
   
   
@@ -72,7 +85,6 @@
   
   .registration-form__submit{
     @include submit-red-button;
-    margin-bottom: 113px;
     margin-top: 55px;
     text-transform: uppercase;
   
