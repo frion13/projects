@@ -1,14 +1,21 @@
 .cart__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 145px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 79px;
+    }
+    @media (min-width: 375px) and (max-width: 425px) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 57px;
   }
-  
+}
+
   .cart__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,8 +23,6 @@
   }
   
   .cart__list-item {
-    width: 100%;
-    max-height: 306px;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
     display: flex;
     margin: 0 0 40px 0;
@@ -27,11 +32,19 @@
     display: flex;
     flex-direction: column;
     width: 390px;
-    padding: 22px 30px 0 30px;
+    padding: 22px 0 0 30px;
     background-color: #FFFFFF;
     position: relative;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 472px
+    }
+    @media (min-width: 375px) and (max-width: 425px) {
+      width:fit-content;
+      }
+    }
+
     
-  }
+  
   
   .cart__list-heading {
     font-size: 1.5rem;
@@ -42,6 +55,9 @@
     color: #222224;
     max-width: 200px;
     margin: 0 0 42px 0;
+    @media (min-width: 375px) and (max-width: 425px) {
+      font-size: 1rem;
+    }
   }
   
   .cart__list-text {
@@ -51,6 +67,11 @@
     font-style: normal;
     color: #575757;
     margin: 0 0 6px 0;
+    @media (min-width: 375px) and (max-width: 425px) {
+      font-size: 1rem;
+      margin: 0;
+      line-height: normal;
+    }
   }
   
   
@@ -189,8 +210,10 @@
   .cart__shipping_wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      flex-direction: row;
+    }
   }
   
   .cart__shipping_button {
@@ -280,6 +303,9 @@
   .cart {
     display: flex;
     text-align: start;
+    @media (min-width: 375px) and (max-width: 425px){
+      margin: 39px 8px 0; ;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -306,3 +332,66 @@
   .cart__list-pink{
     color: $price-color;
   }
+
+
+  // .cart__list-img {
+  //   background-color: #F3EEEF;
+  //   display: flex;
+  //   width: 262px;
+  //   height: 306px;
+  //   justify-content: center;
+  // }
+
+
+  .cart__list-img {
+    background-color: #F3EEEF;
+    display: flex;
+    width: 262px;
+    height: 306px;
+    justify-content: center;
+    @media (min-width: 375px) and (max-width: 425px) {
+      width: 144px;
+      height: 188px;
+;
+    }
+
+}
+
+.cart__list-img img {
+    max-width: 100%; /* Картинка будет подстраиваться под ширину блока */
+    height: 100%; /* Автоматически подстраивает высоту, чтобы сохранить пропорции */
+    
+   
+    
+}
+
+  .cart-with-button{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .cart__list-buttons-button {
+    width: 234px;
+    height: 49px;
+    border: 1px solid #A4A4A4;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+    color: #A4A4A4;
+    transition-property: background-color, color, border;
+    transition-duration: 300ms;
+    @media (min-width: 375px) and (max-width: 425px){
+      width: fit-content;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .cart__list-buttons {
+      justify-content: space-around;
+    }
+  }
+
+  

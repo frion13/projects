@@ -69,8 +69,8 @@
             </nav>
             </a>
             </div>
-            <a href="registration.html"><img src="img/reg.svg" alt="reg"></a>
-            <a href="cart.html"><img src="img/cart.svg" alt="cart"></a>
+            <a class="img_hide" href="registration.html"><img src="img/reg.svg" alt="reg"></a>
+            <a class="img_hide" href="cart.html"><img src="img/cart.svg" alt="cart"></a>
         </nav>
         
     </header>
@@ -82,9 +82,11 @@
     <section class="cart center">
         <h2 class="visually-hidden">корзина</h2>
         <div class="cart__wrapper">
+            <div class="cart-with-button">
         <ul class="cart__list">
             <li class="cart__list-item">
-                <img src="img/product3.jpg" alt="Man in hoody" width="262" height="306" class="cart__list-img">
+                <div class="cart__list-img">
+                <img src="img/product3.jpg" alt="Man in hoody"  class="cart__list-img"></div>
                 <div class="cart__list-wrapper">
                     <h3 class="cart__list-heading">mango people t-shirt</h3>
                     <p class="cart__list-text">Price: <span class="cart__list-pink">$300</span></p>
@@ -97,10 +99,8 @@
                 </div>
             </li>
             <li class="cart__list-item">
-                <svg width="262" height="306" viewBox="0 0 360 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M360 0H0V420H360V0Z" fill="#F7E4E2"/>
-                    <image href="img/catalog2.png" x="100" y="0" width="142" height="400" />
-                    </svg>
+                <div class="cart__list-img">
+                <img src="img/catalog2.png"></div>
                 <div class="cart__list-wrapper">
                     <h3 class="cart__list-heading">mango people t-shirt</h3>
                     <p class="cart__list-text">Price: <span class="cart__list-pink">$300</span></p>
@@ -113,11 +113,18 @@
                 </div>
             </li>
         </ul>
-            <div class="cart__list-buttons">
-                <a href="#"><button type="reset" class="cart__list-buttons-button">clear shopping cart</button></a>
-                <a href=""><button type="button" class="cart__list-buttons-button">continue shopping</button></a>
-            </div>
-        </div>                  
+            
+        
+
+
+        <div class="cart__list-buttons">
+            <a href="#"><button type="reset" class="cart__list-buttons-button">clear shopping cart</button></a>
+            <a href=""><button type="button" class="cart__list-buttons-button">continue shopping</button></a>
+        </div>  
+    </div>
+
+    
+    <div class="cart__list-buttons">
         <div class="cart__shipping_wrapper">
             <form action="post" class="cart__shipping">
                 <h3 class="cart__shipping_heading">shipping adress</h3>
@@ -140,6 +147,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
    
 </section>
 

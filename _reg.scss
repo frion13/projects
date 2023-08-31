@@ -3,6 +3,11 @@
     justify-content: space-around;
     text-align: start;
     flex-basis: fit-content;
+    @media (min-width: 375px) and (max-width: 425px) {
+      flex-direction: column;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
   }
   
   
@@ -25,6 +30,9 @@
         font-weight: 300;
         text-transform: uppercase;
         padding: 64px 0 0 0;
+        @media (min-width: 375px) and (max-width: 425px) {
+          font-size: 1rem;
+        }
     }
     &__subheading{
         @include registration_text;
@@ -33,6 +41,10 @@
         margin: 22px 0 0 0;
         display: block;
         max-width: 650px;
+        @media (min-width: 375px) and (max-width: 425px) {
+          font-size: 1rem;
+        }
+
     }
     &__list{
         list-style: none;
@@ -42,7 +54,18 @@
             font-weight: 300;
             margin: 16px 0 0 43px;
             position: relative;
+            @media (min-width: 375px) and (max-width: 425px) {
+              font-size: 1rem;
+              margin: 16px 0 0 0;
+              line-height: 29px;
+            }
+          
+              
+            
         }
+    }
+    @media (min-width: 375px) and (max-width: 425px) {
+      max-width: fit-content;
     }
   }
   
@@ -95,3 +118,13 @@
     @extend %hower-button
   
   }
+
+
+  // font-size: 1rem;
+  // font-style: normal;
+  // color: #000000;
+  // text-align: start;
+  // line-height: 29px;
+  // font-weight: 300;
+  // margin: 16px 0 0 0;
+  // position: relative;
